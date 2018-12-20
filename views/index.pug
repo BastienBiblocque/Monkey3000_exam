@@ -1,0 +1,21 @@
+html
+  head
+  style
+    include css/style.css
+    include css/button.css
+    include css/home.css
+    title= title
+
+
+  body
+    h1= message
+    a(href = "/home") revenir au menu
+    h4 Pour modifier un singe cliquer sur son nom, pour le Supprimersur supprimer
+    - var name = ""
+    ul
+      for singe in singes
+        - name = singe.Nom
+        form(method="post" action="/monkeys/delete/"+singe.id)
+          li
+            a(href="/modifmonkey/"+singe.id) #{name}
+              button#id.form-control(name='#{singe.id}') Supprimer

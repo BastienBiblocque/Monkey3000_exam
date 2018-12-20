@@ -1,0 +1,18 @@
+html
+  head
+  style
+    include css/style.css
+    include css/button.css
+    include css/home.css
+    title= title
+
+
+  body
+    h1= message
+    a(href = "/home") revenir au menu
+    - var name = ""
+    ul
+      for cage in cages
+        - name = cage.id
+        li
+          #{name}

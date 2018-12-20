@@ -1,0 +1,21 @@
+html
+
+  head
+    style
+      include css/style.css
+      include css/button.css
+    title= title
+
+  body
+
+    form(method='POST' action='/modifmonkey/'+singes.id)
+      div.form-group
+        label(for='Nom') Nom:
+          input#Nom.form-control(type='text', placeholder=singes.Nom, name='Nom')
+        label(for='Age') Age:
+          input#Nom.form-control(type='text', placeholder=singes.Age, name='Age')
+        label(for='Race') Race:
+          input#Nom.form-control(type='text', placeholder=singes.Race, name='Race')
+        label(for='Cage') Cage:
+          input#Nom.form-control(type='number', min="1", max = "5", placeholder='', name='Cage')
+      button.btn.btn-primary(type='submit') Mettre en cage

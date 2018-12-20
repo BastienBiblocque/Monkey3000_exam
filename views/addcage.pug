@@ -1,0 +1,20 @@
+html
+  head
+    title= title
+    style
+      include css/style.css
+      include css/button.css
+  body
+    h1
+    a(href = "/home") revenir au menu
+    <br><br>
+    vous Voulez vous ajoutez une cage ? Oui.
+
+
+    <br>
+    form(method='POST' action='/addcage')
+      div.form-group
+        label(for='Number') Number:
+          input#Nom.form-control(type='text', placeholder='Numero de la cage', name='Number')
+          <br>
+        button.btn.btn-primary(type='submit') Sign up

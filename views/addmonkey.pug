@@ -1,0 +1,25 @@
+html
+
+  head
+    style
+      include css/style.css
+      include css/button.css
+    title= title
+
+  body
+  a(href = "/home") revenir au menu
+  <br><br>
+  vous Voulez vous ajoutez un singe ? Oui.
+
+
+    form(method='POST' action='/addmonkey')
+      div.form-group
+        label(for='Nom') Nom:
+          input#Nom.form-control(type='text', placeholder='ex : Jean_Marie', name='Nom')
+        label(for='Age') Age:
+          input#Nom.form-control(type='text', placeholder='ex : 18', name='Age')
+        label(for='Race') Race:
+          input#Nom.form-control(type='text', placeholder='ex : Etudiant', name='Race')
+        label(for='Cage') Cage:
+          input#Nom.form-control(type='number', min="0", max = count, placeholder='', name='Cage')
+      button.btn.btn-primary(type='submit') Mettre en cage

@@ -1,0 +1,4 @@
+installer node 
+installer npm
+créer singe dans la BD
+lancer npm start
