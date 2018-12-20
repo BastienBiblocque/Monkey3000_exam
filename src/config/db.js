@@ -1,9 +1,9 @@
 module.exports = {
-    database: /*'b718dgxhs'*/'singes',
-    username: /*'ukbckyf0bohvyhf8'*/'root',
-    password: /*'RIfu7C8tGSNo7aZ5pme'*/'',
+    database: process.env.MYSQL_ADDON_DB,
+    username: process.env.MYSQL_ADDON_USER,
+    password: process.env.MYSQL_ADDON_PASSWORD,
     options: {
-        host: /*'b718dgxhs-mysql.services.clever-cloud.com'*/'localhost',
+        host: process.env.MYSQL_ADDON_HOST,
         dialect: 'mysql'
     }
 }
